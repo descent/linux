@@ -701,6 +701,7 @@ asmlinkage long sys_sysfs(int option,
 asmlinkage long sys_syslog(int type, char __user *buf, int len);
 asmlinkage long sys_uselib(const char __user *library);
 asmlinkage long sys_ni_syscall(void);
+asmlinkage long sys_get_mmu_reg(unsigned int reg_type);
 asmlinkage long sys_ptrace(long request, long pid, unsigned long addr,
 			   unsigned long data);
 
@@ -825,6 +826,7 @@ asmlinkage long sys_fanotify_mark(int fanotify_fd, unsigned int flags,
 asmlinkage long sys_syncfs(int fd);
 
 asmlinkage long sys_fork(void);
+asmlinkage long sys_get_mmu_reg(unsigned int reg_type);
 asmlinkage long sys_vfork(void);
 #ifdef CONFIG_CLONE_BACKWARDS
 asmlinkage long sys_clone(unsigned long, unsigned long, int __user *, int,
